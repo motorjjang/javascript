@@ -7,9 +7,11 @@
     <script>
         var userHeight = prompt("당신의 키는 ?", "0");
         var userWeight = prompt("당신의 몸무게는 ?", "0");
+
         var normal_w = (userHeight - 100) * 0.9;
-        document.write("당신의 적정 몸무게는 ", normal_w, " 입니다.<br>");
-        document.write("적정 몸무게에서 ", userWeight - normal_w,"kg이 초과되었습니다.")
+        var result = userWeight >= normal_w -5 && userWeight <= normal_w + 5;
+        result = result ? "적정체중 입니다." : "적정체중이 아닙니다.";
+        document.write(result);
     </script>
 </head>
 <body>
