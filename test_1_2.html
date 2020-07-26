@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sale_01 = 1200;
+        var sale_02 = 1300;
+        var sale_03 = 1000;
+        var sale_04 = prompt("4분기 판매량을 입력하시오 : ", "0");
+
+        var str = "<table border='1'>";
+        str += "<tr>";
+        str += "<th>1분기</th><th>2분기</th><th>3분기</th><th>4분기</th>";
+        str += "</tr>";
+        
+        str += "<tr>";
+        str += "<td>"+sale_01+"</td><td>"+sale_02+"</td><td>"+sale_03+"</td><td>"+sale_04+"</td>";
+        str += "</tr>";
+
+        str += "</table>";
+        document.write(str);
+
+        var avg = (sale_01 + sale_02 + sale_03) / 3
+        var result = sale_04 >= avg ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
+        document.write("<br>", result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
