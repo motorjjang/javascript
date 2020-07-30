@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function avgSubject(arrData){
+            var score = 0;
+            var sum = 0;
+            var avg = 0;
+            for (i in arrData){
+                score = prompt(arrData[i] + " 점수는?", "");
+                sum += Number(score);
+            }
+
+            console.log(arrData.length);
+            console.log(sum);
+
+            avg = sum / arrData.length
+            return avg;
+        }
+
+        var subject = ["국어", "영어", "수학"];
+        document.write("평균 점수는 : " + avgSubject(subject) + " 입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
