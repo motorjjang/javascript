@@ -8,14 +8,14 @@
     <script>
         $(function(){
             var obj=[{"area":"서울"}, {"area":"부산"}, {"area":"전주"}];
-
             $(obj).each(function(i, o){
+                console.log(o.area);
                 console.log("index : ", i, ", object : ", o);
             });
             console.log("====The End1====");
             
             $.each($("#menu2 li"), function(i, o){
-                console.log(i + " : ", o);
+                console.log(i + " : ", o, ", text : ", $(this).text());
             });
             console.log("====The End2====");
 
