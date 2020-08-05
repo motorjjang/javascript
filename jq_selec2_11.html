@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#wrap a[target]").css("background-color", "lime");
+
+            $("#wrap a[href^=https").css("color", "red");
+
+            $("#wrap a[href$=net").css("background-color", "yellow");
+
+            $("#wrap a[href*=google").css("background-color", "blue");
+
+            $("#member_f input:text").css("background-color", "violet");
+
+            $("#member_f input:password").css("background-color", "brown");
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p>
+            <a href="http://easyspub.co.kr" target="_black">EasysPub</a>
+        </p>
+        <p>
+            <a href="https://naver.com">Naver</a>
+        </p>
+        <p>
+            <a href="https://daum.net">Daum</a>
+        </p>
+        <p>
+            <a href="https://google.com">Google</a>
+        </p>
+    </div>
+    <form action="#" method="get" id="member_f">
+        <p>
+            <label for="user_id">아이디&nbsp;</label><input type="text" name="user_id" id="user_id" placeholder="아이디" required autofocus>
+        </p>
+        <p>
+            <label for="user_pw">비밀번호&nbsp;</label><input type="password" name="user_pw" id="user_pw" placeholder="비밀번호" required>
+        </p>
+        <p>            
+            <label for="user_ck">체크</label><input type="checkbox" name="user_ck" id="user_ck">
+        </p>
+        <p>
+            <lable for="user_radio">라디오</lable><input type="radio" name="user_radio" id="user_radio">
+        </p>
+        <p>
+            <strong>성별</strong>
+            <input type="radio" name="gender" value="M" checked>남자
+            <input type="radio" name="gender" value="F">여자
+        </p>
+        <p>
+            <select>
+                <option value="ktx">KTX</option>
+                <option value="itx" selected>ITX</option>
+                <option value="mugung">무궁화호</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="등록">
+        </p>
+    </form>
+</body>
+</html>
